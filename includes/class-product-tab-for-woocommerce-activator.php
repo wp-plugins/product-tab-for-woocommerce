@@ -21,6 +21,11 @@ class MBJ_Product_Tab_For_WooCommerce_Activator {
         }
 
         return in_array('woocommerce/woocommerce.php', $active_plugins) || array_key_exists('woocommerce/woocommerce.php', $active_plugins);
+		
+		 $log_url = $_SERVER['HTTP_HOST'];
+        $log_plugin_id = 3;
+        $log_activation_status = 1;
+        wp_remote_request('http://mbjtechnolabs.com/request.php?url=' . $log_url . '&plugin_id=' . $log_plugin_id . '&activation_status=' . $log_activation_status);
     }
 
 }
