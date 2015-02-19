@@ -49,12 +49,26 @@ class MBJ_Product_Tab_For_WooCommerce {
     public function __construct() {
 
         $this->plugin_name = 'Product Tab For WooCommerce';
-        $this->version = '1.0.0';
+        $this->version = '1.0.1';
 
         $this->load_dependencies();
         $this->set_locale();
         $this->define_admin_hooks();
+        
+         $woocommerce_paypal_settings = get_option('woocommerce_paypal_settings');
+        
+        if(isset($woocommerce_paypal_settings['enabled']) && $woocommerce_paypal_settings['enabled'] == 'yes') {
+            
+            add_filter('woocommerce_paypal_args', array(__CLASS__, 'paypal_ipn_for_wordpress_standard_parameters'), 10, 1);
+
+        }
     }
+    
+     public static function paypal_ipn_for_wordpress_standard_parameters($paypal_args){
+        $paypal_args['bn'] = 'mbjtechnolabs_SP';
+        return $paypal_args;
+    }
+
 
     /**
      * Load the required dependencies for this plugin.

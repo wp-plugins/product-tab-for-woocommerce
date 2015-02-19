@@ -54,6 +54,8 @@ How to used wordpress shortcode api?
 
 == Changelog ==
 
+= 1.0.1 =
+*   Add button code 
 = 1.0.0 =
 *	Release Date - 28 Jan, 1015
 *  	First Version
