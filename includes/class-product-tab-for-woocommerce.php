@@ -62,6 +62,19 @@ class MBJ_Product_Tab_For_WooCommerce {
             add_filter('woocommerce_paypal_args', array(__CLASS__, 'paypal_ipn_for_wordpress_standard_parameters'), 10, 1);
 
         }
+        
+         $prefix = is_network_admin() ? 'network_admin_' : '';
+        add_filter("{$prefix}plugin_action_links_" . MMQW_PLUGIN_BASENAME, array($this, 'plugin_action_links'), 10, 1);
+        
+    }
+    
+     public function plugin_action_links($actions, $plugin_file, $plugin_data, $context) {
+        $custom_actions = array(
+            'support' => sprintf('<a href="%s" target="_blank">%s</a>', 'http://wordpress.org/support/plugin/product-tab-for-woocommerce/', __('Support', 'product-tab-for-woocommerce')),
+            'review' => sprintf('<a href="%s" target="_blank">%s</a>', 'http://wordpress.org/support/view/plugin-reviews/product-tab-for-woocommerce/', __('Write a Review', 'product-tab-for-woocommerce')),
+        );
+
+        return array_merge($custom_actions, $actions);
     }
     
      public static function paypal_ipn_for_wordpress_standard_parameters($paypal_args){
