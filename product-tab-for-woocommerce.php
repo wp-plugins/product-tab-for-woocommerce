@@ -20,6 +20,13 @@ if ( ! defined( 'WPINC' ) ) {
 }
 
 /**
+ * define plugin basename
+ */
+if (!defined('PTW_PLUGIN_BASENAME')) {
+    define('PTW_PLUGIN_BASENAME', plugin_basename(__FILE__));
+}
+
+/**
  * The code that runs during plugin activation.
  * This action is documented in includes/class-product-tab-for-woocommerce-activator.php
  */
