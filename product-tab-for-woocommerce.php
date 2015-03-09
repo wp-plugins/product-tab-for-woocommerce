@@ -5,7 +5,7 @@
  * Plugin Name:       Product Tab For WooCommerce
  * Plugin URI:        http://www.mbjtechnolabs.com
  * Description:       This plugin extends the WooCommerce plugin by allowing a extra product tab to be created with WordPress visual editor.
- * Version:           1.0.1
+ * Version:           1.0.2
  * Author:            phpwebcreators
  * Author URI:        http://www.mbjtechnolabs.com
  * License:           GNU General Public License v3.0

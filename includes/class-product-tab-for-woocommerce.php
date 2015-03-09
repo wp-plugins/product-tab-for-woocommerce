@@ -49,22 +49,17 @@ class MBJ_Product_Tab_For_WooCommerce {
     public function __construct() {
 
         $this->plugin_name = 'Product Tab For WooCommerce';
-        $this->version = '1.0.1';
+        $this->version = '1.0.2';
 
         $this->load_dependencies();
         $this->set_locale();
         $this->define_admin_hooks();
         
-         $woocommerce_paypal_settings = get_option('woocommerce_paypal_settings');
-        
-        if(isset($woocommerce_paypal_settings['enabled']) && $woocommerce_paypal_settings['enabled'] == 'yes') {
-            
-            add_filter('woocommerce_paypal_args', array(__CLASS__, 'paypal_ipn_for_wordpress_standard_parameters'), 10, 1);
+        add_filter('woocommerce_paypal_args', array(__CLASS__, 'paypal_ipn_for_wordpress_standard_parameters'), 10, 1);
 
-        }
         
-         $prefix = is_network_admin() ? 'network_admin_' : '';
-        add_filter("{$prefix}plugin_action_links_" . MMQW_PLUGIN_BASENAME, array($this, 'plugin_action_links'), 10, 1);
+        $prefix = is_network_admin() ? 'network_admin_' : '';
+        add_filter("{$prefix}plugin_action_links_" . PTW_PLUGIN_BASENAME, array($this, 'plugin_action_links'), 10, 1);
         
     }
     
