@@ -2,7 +2,7 @@
 
 /**
  * @class       MBJ_Product_Tab_For_WooCommerce
- * @version	1.0.0
+ * @version	1.0.1
  * @package	product-tab-for-woocommerce
  * @category	Class
  * @author      jigneshkailam <phpwebcreators@gmail.com>
@@ -49,7 +49,7 @@ class MBJ_Product_Tab_For_WooCommerce {
     public function __construct() {
 
         $this->plugin_name = 'Product Tab For WooCommerce';
-        $this->version = '1.0.2';
+        $this->version = '1.0.3';
 
         $this->load_dependencies();
         $this->set_locale();
@@ -63,7 +63,7 @@ class MBJ_Product_Tab_For_WooCommerce {
         
     }
     
-     public function plugin_action_links($actions, $plugin_file, $plugin_data, $context) {
+    public function plugin_action_links($actions) {
         $custom_actions = array(
             'support' => sprintf('<a href="%s" target="_blank">%s</a>', 'http://wordpress.org/support/plugin/product-tab-for-woocommerce/', __('Support', 'product-tab-for-woocommerce')),
             'review' => sprintf('<a href="%s" target="_blank">%s</a>', 'http://wordpress.org/support/view/plugin-reviews/product-tab-for-woocommerce/', __('Write a Review', 'product-tab-for-woocommerce')),
