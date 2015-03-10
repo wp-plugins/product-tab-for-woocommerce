@@ -53,7 +53,7 @@ How to used wordpress shortcode api?
 
 
 == Changelog ==
-= 1.0.3
+= 1.0.3 =
 *	Resolved notice suggested by sneet (Thank you sneet :) )
 = 1.0.1 =
 *   Add button code 
