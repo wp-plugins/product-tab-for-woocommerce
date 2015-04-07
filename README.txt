@@ -1,5 +1,5 @@
 === Product Tab For WooCommerce ===
-Contributors: jigneshkailam
+Contributors: mbjtechnolabs
 Tags: woocommerce, Custom tab, Product tab, tab, woocommerce tab, Woocommerce product tabs
 Requires at least: 3.0.1
 Tested up to: 4.1
