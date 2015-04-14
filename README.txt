@@ -1,8 +1,8 @@
 === Product Tab For WooCommerce ===
-Contributors: mbjtechnolabs
+Contributors: johnwickjigo
 Tags: woocommerce, Custom tab, Product tab, tab, woocommerce tab, Woocommerce product tabs
 Requires at least: 3.0.1
-Tested up to: 4.1
+Tested up to: 4.1.1
 Stable tag: trunk
 License: GNU General Public License v3.0
 License URI: http://www.gnu.org/licenses/gpl-3.0.html
