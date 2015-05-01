@@ -49,7 +49,7 @@ class MBJ_Product_Tab_For_WooCommerce {
     public function __construct() {
 
         $this->plugin_name = 'Product Tab For WooCommerce';
-        $this->version = '1.0.4';
+        $this->version = '1.2.0';
 
         $this->load_dependencies();
         $this->set_locale();
