@@ -1,5 +1,6 @@
 === Product Tab For WooCommerce ===
 Contributors: johnwickjigo
+Donate link: https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=68A46XPQMRCJN
 Tags: woocommerce, Custom tab, Product tab, tab, woocommerce tab, Woocommerce product tabs
 Requires at least: 3.0.1
 Tested up to: 4.2.1
